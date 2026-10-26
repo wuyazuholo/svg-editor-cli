@@ -54,4 +54,6 @@ npm run check
 
 本机没有系统 Node/npm 时，用等价的 `./scripts/check.sh`。检查包括 TypeScript 严格类型检查、依赖方向和类名检查，以及 46 项功能／集成测试。
 
-目前仅实现 Phase 1；`box` 插件类型属于后续阶段。SVG 支持范围和取舍见[提交文档](doc/README.md#svg-读写边界)。
+目前仅实现 Phase 1；`box` 插件类型属于后续阶段。SVG 支持六种基础图形、基础几何与样式属性，以及嵌套 translate 和正数等比 scale。额外保留导入文字的数值 font-size 和 text-anchor。
+
+根 viewBox 须匹配 `0 0 width height`；不支持旋转、非等比缩放、CSS/style、path/polygon、defs/use、tspan 或带 px/% 后缀的尺寸。不支持的输入会报错并保留当前文档。导入变换会归一化到叶子坐标，缩放的继承描边宽度可能固化为叶子属性；本项目不承诺任意 SVG 的无损往返。
