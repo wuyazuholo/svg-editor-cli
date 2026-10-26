@@ -9,7 +9,8 @@
     "cli": "node src/cli/main.ts",
     "test": "node --test test/*.test.ts",
     "typecheck": "tsc --noEmit",
-    "check": "npm run typecheck && npm test"
+    "architecture": "node scripts/CheckArchitecture.ts",
+    "check": "npm run typecheck && npm run architecture && npm test"
   },
   "dependencies": { "sax": "1.4.1" },
   "devDependencies": {

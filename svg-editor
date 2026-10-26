@@ -1,0 +1,13 @@
+#!/bin/sh
+set -eu
+task_root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+if command -v node >/dev/null 2>&1; then
+  task_node=$(command -v node)
+else
+  task_node="$HOME/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node"
+fi
+if [ ! -x "$task_node" ]; then
+  printf '%s\n' '需要 Node.js 24 或更新版本，请安装后执行 npm install 和 npm run cli。' >&2
+  exit 127
+fi
+exec "$task_node" "$task_root/src/cli/main.ts" "$@"
