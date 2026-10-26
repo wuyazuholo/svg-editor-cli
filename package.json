@@ -1,0 +1,20 @@
+{
+  "name": "svg-editor-cli-lab1",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Lab1 Phase 1: object-oriented SVG editor with Command and Composite",
+  "type": "module",
+  "engines": { "node": ">=24.0.0" },
+  "scripts": {
+    "cli": "node src/cli/main.ts",
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test"
+  },
+  "dependencies": { "sax": "1.4.1" },
+  "devDependencies": {
+    "@types/node": "24.10.0",
+    "@types/sax": "1.2.7",
+    "typescript": "5.9.3"
+  }
+}
