@@ -1,6 +1,6 @@
 # Lab1 Phase 1：SVG 编辑器（CLI）
 
-Git 仓库地址：**待补充（当前仅有本地仓库，尚未创建远程仓库）**。
+Git 仓库地址：[wuyazuholo/svg-editor-cli](https://github.com/wuyazuholo/svg-editor-cli)。
 
 ## 架构方案
 

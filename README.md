@@ -1,6 +1,6 @@
 # SVG 编辑器 CLI · Lab1 Phase 1
 
-Git 仓库地址：**待补充。当前仅有本地 Git 仓库，尚未创建或关联远程仓库。**
+Git 仓库地址：[wuyazuholo/svg-editor-cli](https://github.com/wuyazuholo/svg-editor-cli)。
 
 TypeScript 面向对象实现的 SVG 命令行编辑器，支持六种图形、嵌套容器、19 条命令、撤销重做和 SVG 文件读写。
 
