@@ -1,0 +1,22 @@
+@startuml
+title SVG CLI — Phase 1 package dependencies
+top to bottom direction
+skinparam packageStyle rectangle
+package "cli" as cli
+package "commands" as commands
+package "application" as application
+package "io" as io
+package "domain" as domain
+cli --> commands : parse / dispatch
+cli --> application : compose session
+cli --> io : inject adapter
+commands --> application : execute / history
+commands --> domain : edit / inspect
+application --> domain : document / snapshots
+io ..> application : implement DocumentStore port
+io --> domain : SVG encode / decode
+note bottom of domain
+No filesystem, terminal, XML library
+or dependency on outer layers
+end note
+@enduml

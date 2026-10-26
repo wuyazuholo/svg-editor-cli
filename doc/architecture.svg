@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650">
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#475569" stroke-width="1.5"/></marker>
+    <style>text{font-family:Arial,sans-serif;fill:#172554}.title{font-size:25px;font-weight:700}.name{font-size:22px;font-weight:700}.label{font-size:15px;fill:#475569}.box{stroke:#64748b;stroke-width:1.5;rx:10}.edge{fill:none;stroke:#475569;stroke-width:1.8;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect width="1000" height="650" fill="#f8fafc" rx="16"/>
+  <text x="40" y="45" class="title">SVG editor CLI — package dependencies</text>
+  <text x="40" y="74" class="label">Arrows point to the package being depended on. Dashed arrow implements a port.</text>
+  <path class="edge" d="M440 177 L215 263"/><text x="260" y="207" class="label">parse / dispatch</text>
+  <path class="edge" d="M500 187 L500 263"/>
+  <path class="edge" d="M560 177 L785 263"/><text x="658" y="207" class="label">inject adapter</text>
+  <path class="edge" d="M295 310 L390 310"/>
+  <path class="edge" stroke-dasharray="7 5" d="M705 330 L610 330"/>
+  <path class="edge" d="M205 357 L405 485"/>
+  <path class="edge" d="M500 357 L500 485"/>
+  <path class="edge" d="M795 357 L595 485"/>
+  <g><rect x="400" y="112" width="200" height="75" class="box" fill="#dbeafe"/><text x="500" y="144" text-anchor="middle" class="name">cli</text><text x="500" y="169" text-anchor="middle" class="label">REPL / registry / lexer</text></g>
+  <g><rect x="95" y="265" width="200" height="92" class="box" fill="#e0e7ff"/><text x="195" y="301" text-anchor="middle" class="name">commands</text><text x="195" y="330" text-anchor="middle" class="label">Command / transaction</text></g>
+  <g><rect x="390" y="265" width="220" height="92" class="box" fill="#e0f2fe"/><text x="500" y="301" text-anchor="middle" class="name">application</text><text x="500" y="330" text-anchor="middle" class="label">session / history / ports</text></g>
+  <g><rect x="705" y="265" width="200" height="92" class="box" fill="#fef3c7"/><text x="805" y="301" text-anchor="middle" class="name">io</text><text x="805" y="330" text-anchor="middle" class="label">SVG / filesystem adapter</text></g>
+  <text x="245" y="421" class="label">edit / inspect</text><text x="515" y="423" class="label">snapshots</text><text x="717" y="421" class="label">encode / decode</text>
+  <g><rect x="345" y="488" width="310" height="88" class="box" fill="#dcfce7"/><text x="500" y="525" text-anchor="middle" class="name">domain</text><text x="500" y="553" text-anchor="middle" class="label">Shape / Composite / SvgDocument</text></g>
+  <text x="500" y="615" text-anchor="middle" class="label">Domain has no dependency on terminal, filesystem, XML libraries or outer layers.</text>
+</svg>
