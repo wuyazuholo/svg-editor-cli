@@ -34,7 +34,10 @@ export abstract class Shape {
     return { id: this.id, ...Object.fromEntries(this.appearance) };
   }
 
-  content(): string { return ''; }
+  readAttribute(attribute: string, value: string): void { this.set(attribute, value); }
+  details(): Readonly<Record<string, string>> { return this.attributes(); }
+
+  content(): string | null { return null; }
   children(): readonly Shape[] { return []; }
   find(id: string): Shape | undefined { return this.id === id ? this : undefined; }
   descendants(): readonly Shape[] { return [this]; }
